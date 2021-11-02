@@ -2,6 +2,10 @@
 ## By ark_ryl
 Generate (as of now, empty) Halo 3 .shader files from FBX files.
 
+## Requirements
++ Windows Vista/7/8/8.1/10/11
++ Latest .NET runtime
+
 ## How to Use
 + Export desired FBX file from your 3d software of choice
 + Select in Blader
