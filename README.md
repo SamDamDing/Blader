@@ -1,6 +1,6 @@
 # Blader
 ## By ark_ryl
-Generate Halo 3 .shader files from FBX files.
+Generate (as of now, empty) Halo 3 .shader files from FBX files.
 
 ## How to Use
 + Export desired FBX file from your 3d software of choice
