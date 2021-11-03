@@ -361,3 +361,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/blader.psd
+/blader_sharp.png
+/blader_banner.png
+/blader.png

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Blader"
         mc:Ignorable="d"
         Title="Blader" Height="181.2" Width="617.867" Background="#FF454545"
-        ResizeMode="NoResize">
+        ResizeMode="NoResize" Icon="blader.png">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="301"/>
