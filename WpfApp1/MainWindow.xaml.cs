@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Windows;
 using Microsoft.WindowsAPICodePack.Dialogs;
-using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace Blader
 {
@@ -31,18 +31,25 @@ namespace Blader
         {
             var fbxDir = FBXFilePathBox.Text;
             var shaderDir = MapsShadersFilePathBox.Text;
-            string errorMsg = string.Empty;
+            var errorMsg = string.Empty;
+            var gameSelection = (Game)GameSelectComboBox.SelectedIndex;
 
             if (!File.Exists(fbxDir) || string.IsNullOrEmpty(fbxDir))
-                errorMsg += "Error: FBX file directory not found! \n";
+                errorMsg += "FBX file directory not found! \n";
             if (!Directory.Exists(shaderDir) || string.IsNullOrEmpty(shaderDir))
-                errorMsg += "Error: Shader path directory not found! \n";
+                errorMsg += "Shader path directory not found! \n";
             if (!string.IsNullOrEmpty(errorMsg))
-                System.Windows.MessageBox.Show(errorMsg);
+                System.Windows.MessageBox.Show(errorMsg, 
+                                               "Blader Error!",
+                                               MessageBoxButton.OK,
+                                               MessageBoxImage.Error);
             else
             {
-                ShaderManager.CreateFiles(fbxDir, shaderDir);
-                System.Windows.MessageBox.Show($"Shader files created successfully at {shaderDir}!");
+                ShaderManager.CreateFiles(fbxDir, shaderDir, gameSelection);
+                System.Windows.MessageBox.Show($"Shader files created successfully at {shaderDir}",
+                                                "Blader",
+                                                MessageBoxButton.OK,
+                                                MessageBoxImage.Information);
             }
         }
 
@@ -61,6 +68,19 @@ namespace Blader
                 dir = browserDialog.FileName;
 
             return dir;
+        }
+
+        private void Icon_Click(object sender, RoutedEventArgs e)
+        {
+            var uri = @"https://github.com/arkryl/Blader";
+
+            var startInfo = new ProcessStartInfo
+            {
+                FileName = uri,
+                UseShellExecute = true
+            };
+
+            Process.Start(startInfo);
         }
     }
 }
