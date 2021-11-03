@@ -1,5 +1,5 @@
 # Blader
-## By ark_ryl
+### By ark_ryl
 Generate (as of now, empty) Halo 3 .shader files from FBX files.
 
 Tired of having to manually create dozens and dozens of shader files for your new Halo 3 map? 
