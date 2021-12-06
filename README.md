@@ -22,11 +22,11 @@ Currently supported: Halo 2 and Halo 3.
 ### By SamDamDing
 These scripts do the following
 
-###BlenderRenameTexturesToCharLimit - Run 1st.py
+### BlenderRenameTexturesToCharLimit - Run 1st.py
 Renames the textures in a model in Blender to be 40 characters long
 
-#BlenderRenameMaterialToTexture - Run 2nd.py
+### BlenderRenameMaterialToTexture - Run 2nd.py
 Renames the materials the model uses to the name of the texture in the first slot.
 
-#H3ShaderBitmapTool Modify and Run 3rd.py
+### H3ShaderBitmapTool Modify and Run 3rd.py
 Modify this file to use the directory of your shaders. It will hex edit the shader to use the name of the shader file itself as the bitmap. The bitmaps must be placed in the H3EK\tags\objects\bitmaps\custom directory. This directory can be modified if you really wanted to by editing the default_3 template.
