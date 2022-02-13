@@ -45,5 +45,5 @@ These scripts do the following:
 
 + Finally, you can import your ass with Tool and hopefully your textures will look right.
 
-### H3ShaderBitmapTool Modify and Run 3rd.py
+### H3ShaderBitmapToolModifyAndRunLast.py
 + Modify this file to use the directory of your shaders. It will hex edit the shader to use the name of the shader file itself as the bitmap. The bitmaps must be placed in the H3EK\tags\objects\bitmaps\custom directory.
